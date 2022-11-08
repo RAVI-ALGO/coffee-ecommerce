@@ -4,4 +4,25 @@
   width: 40%;
   background: linear-gradient(180deg, #3592FF 0%, #1A28A3 100%);
   backdrop-filter: blur(2px); 
+  
+}
+
+.top70{
+  top: 70px;
+}
+.relative{
+  position: relative;
+}
+.padding-50{
+  padding: 50px;
+}
+.banner-text{
+  padding: 0 40px;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+  color: #FFFFFF;
 }
