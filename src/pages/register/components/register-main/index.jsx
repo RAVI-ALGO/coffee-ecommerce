@@ -7,7 +7,7 @@ const RegisterMain = () => {
   return (
     <div className="register-main">
       <div className="register-container">
-        <h1 className="main-heading">Create Account 😍</h1>
+        <h1 className="main-heading ">Create Account 😍</h1>
         <FloatingLabel
           controlId="floatingInput"
           label="Full Name"
@@ -35,7 +35,7 @@ const RegisterMain = () => {
           label="Date of birth (DD/MM/YYYY)"
           className="my-3"
         >
-          <Form.Control type="date" placeholder="MM/DD/YYYY" />
+          <Form.Control type="date" placeholder="DD/MM/YYYY" value="16/08/2022" />
         </FloatingLabel>
 
         <FloatingLabel

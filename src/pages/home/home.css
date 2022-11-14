@@ -3,3 +3,10 @@
     height:400px;
     border-top: 1px solid; 
 }
+
+.body-main
+{
+    background-color: #f5f0f0bf;
+    padding: 50px 0 100px 0;
+    min-height: 20;
+}

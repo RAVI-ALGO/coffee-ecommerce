@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import "./carousel.css";
 import Carousel from 'react-bootstrap/Carousel';
-import google from "../../assets/images/google.png";
-import mi from "../../assets/images/mi.png";
-import moto from "../../assets/images/moto.png";
-import oppo from "../../assets/images/oppo.png";
-import samsung from "../../assets/images/samsung.png";
+import imgSlider1 from "../../../../common/assets/images/img-slider-1.jpeg";
+import imgSlider2 from "../../../../common/assets/images/img-slider-2.webp";
+import imgSlider3 from "../../../../common/assets/images/img-slider-3.webp";
+import imgSlider4 from "../../../../common/assets/images/img-slider-4.webp";
+import imgSlider5 from "../../../../common/assets/images/img-slider-5.webp";
+
 const ImageSlider = () =>{
   const [index, setIndex] = useState(0);
 
@@ -18,14 +19,14 @@ const ImageSlider = () =>{
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={google}
+          src={imgSlider1}
           alt="First slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={mi}
+          src={imgSlider2}
           alt="Second slide"
         />
 
@@ -33,21 +34,21 @@ const ImageSlider = () =>{
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={moto}
+          src={imgSlider3}
           alt="Third slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={oppo}
+          src={imgSlider4}
           alt="Fourth slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={samsung}
+          src={imgSlider5}
           alt="Fifth slide"
         />
       </Carousel.Item>
