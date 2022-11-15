@@ -1,0 +1,81 @@
+.body-main {
+  background-color:#F7F8F9;
+  padding: 10px 0px 100px 0px;
+  min-height: 500px;
+}
+.filter-main-heading {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #1e2228;
+  text-align: left;
+  margin: 20px;
+}
+
+.filter-main {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+}
+.brand-filter-heading {
+  font-size: 14px;
+  line-height: 16px;
+  color: #1e2228;
+  font-weight: bold;
+  margin: 8px;
+}
+.brand-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pink-link {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: right;
+
+  color: #ff2c91;
+}
+.brand-options
+{
+    margin: 20px 0;
+}
+.brand-option
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+
+}
+.brand-option span
+{
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.brands-options, .price-top{
+    margin: 20px 0;
+}
+.price-filter-heading
+{
+    font-size: 14px;
+line-height: 16px;
+color: #1E2228;
+text-align: left;
+}
+
+.filter-seperator
+{
+    background: #b9b8b8;
+    border: 1px solid #b9b8b8;
+    margin: 20px 0;
+}
+
+.custom-price-value{
+    font-size: 13px;
+    line-height: 22px;
+    color: #1E2228;
+    font-weight: bold;
+}

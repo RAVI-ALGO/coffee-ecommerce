@@ -1,0 +1,24 @@
+.product-list-main-container
+{
+    background-color:#F7F8F9;
+}
+
+.text-align-left{
+    text-align: left;
+}
+body ,html
+{
+    overflow-y: visible;
+}
+.product-main-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-heading{
+    font-size: 24px;
+    line-height: 28px;
+    color: #1E2228;
+    font-weight: bold;
+}
+
