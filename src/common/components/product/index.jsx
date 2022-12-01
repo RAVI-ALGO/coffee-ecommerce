@@ -1,12 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./product.css";
 
 const Product = (props) => {
-  const {imageFile, name, currentPrice, originalPrice, offer, emi, discount } =
+  const navigate = useNavigate();
+  const {imageFile, name, currentPrice, originalPrice, offer, emi, discount ,id, } =
     props.productData;
-    
+
+    const gotoProdutDetailsPage = () =>{
+      const Pname =name.replaceAll(" ","-");
+      navigate(`/products/${Pname}/${id}`);
+    }
+
   return (
-    <div className="product">
+    <div className="product" onClick={gotoProdutDetailsPage}>
       <div className="img-main">
         <img
           src={imageFile}
@@ -22,6 +29,7 @@ const Product = (props) => {
         <div className="discount">{discount}</div>
       </div>
       <div className="emi">{emi}</div>
+      
     </div>
   );
 };

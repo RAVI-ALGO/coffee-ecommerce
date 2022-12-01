@@ -1,0 +1,21 @@
+.color-picker-color {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid #e9e9e9;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.color-picker-Name {
+  font-size: 14px;
+  line-height: 16px;
+  color: #1e2228;
+  text-align: center;
+}
+.pink-text{
+  font-size: 14px;
+line-height: 16px;
+
+color: #FF2C91;
+}

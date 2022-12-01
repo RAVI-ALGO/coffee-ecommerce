@@ -1,0 +1,85 @@
+.main-details-section {
+  text-align: left;
+}
+
+.product-title {
+  font-size: 24px;
+  line-height: 32px;
+  color: #1e2228;
+  width: 500px;
+}
+
+.gap {
+  margin: 15px 0px;
+}
+
+.specifications {
+  margin-left: 0px;
+}
+.features-title {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #939599;
+}
+.specifications ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #939599;
+}
+
+.color-picker-title {
+  display: flex;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1e2228;
+  font-weight: bold;
+}
+.qnty-title {
+  height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  color: #1e2228;
+  margin-right: 10px;
+}
+.quantity-option {
+  display: flex;
+  align-items: center;
+  width: 61px;
+  height: 35px;
+  font-size: 15px;
+}
+.price-and-discounts {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+}
+.current-price {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #1e2228;
+}
+.org-price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 35px;
+  letter-spacing: -0.4px;
+  text-decoration-line: line-through;
+  color: #939599;
+}
+.discount {
+  font-size: 14px;
+  line-height: 30px;
+  color: #21c17a;
+}
+
+.bottom-part {
+  font-size: 14px;
+  line-height: 19px;
+  color: #939599;
+}

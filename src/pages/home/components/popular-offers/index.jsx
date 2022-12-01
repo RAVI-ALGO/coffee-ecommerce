@@ -9,7 +9,7 @@ const Popularoffers = () => {
   const navigate =useNavigate();
 
     const gotoViewAll = () =>{
-        navigate("/product-list");
+        navigate("/products");
     }
 
   return (

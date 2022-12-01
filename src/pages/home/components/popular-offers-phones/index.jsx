@@ -13,7 +13,6 @@ const PopularOffersPhone = () => {
         <Product 
             
             productData={phones}
-            
         />
         </div>
       })}

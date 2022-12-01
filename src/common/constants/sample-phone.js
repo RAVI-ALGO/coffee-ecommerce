@@ -1,17 +1,19 @@
-import Phone1 from "../assets/images/phone1.svg";
+import googlepixel6a1 from "../assets/images/googlePixel6A-1.webp";
 import Phone2 from "../assets/images/phone2.svg";
 import Phone3 from "../assets/images/phone3.svg";
 import Phone4 from "../assets/images/phone4.svg";
 const phoneData = [
     {
-        imageFile: Phone1,
-        name: "Samsung Galaxy S10 Plus (Ceramic White, 1 TB)",
-        currentPrice: "₹25,534",
-        originalPrice: "₹29,999",
-        discount: "16% Off",
+        imageFile:googlepixel6a1,
+        name: "Google Pixel 6a (Charcoal, 6 GB RAM|128 GB ROM)",
+        currentPrice: "₹30,999",
+        originalPrice: "₹43,9992",
+        discount: "9% off",
         offer: "12% cashback",
         emi: "EMI starts @ ₹1356",
         id: "1213",
+        
+
     },
     {
         imageFile: Phone2,
@@ -44,7 +46,7 @@ const phoneData = [
         id: "331213",
     },
     {
-        imageFile: Phone1,
+        imageFile:googlepixel6a1,
         name: "Samsung Galaxy S10 Plus (Ceramic White, 1 TB)",
         currentPrice: "₹25,534",
         originalPrice: "₹29,999",

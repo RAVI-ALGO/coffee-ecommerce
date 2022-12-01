@@ -8,6 +8,7 @@ import {Routes,Route} from "react-router-dom";
 import Register from './pages/register';
 import Home from './pages/home';
 import Productlist from './pages/product-list';
+import ProductDetails from './pages/product-details';
 function App() {
   return (
     <div className="App">
@@ -15,7 +16,8 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
-        <Route path='/product-list' element={<Productlist/>} />
+        <Route path='/products' element={<Productlist/>} />
+        <Route path='/products/:productName/:id' element={<ProductDetails />} />
       </Routes>
     </div>
   );
