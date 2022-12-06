@@ -1,9 +1,9 @@
 import React from "react";
 import "./header.css";
-import cartIcon from "../../assets/icons/cart.svg";
  import userIcon from "../../assets/icons/user.svg";
 import { useNavigate } from "react-router-dom";
 import Logo from "../logo/logo";
+import CartIcon from "../../assets/icons/cart";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const Header = () => {
         </div>
         <div className="right-part">
           <div className="header-icons">
-            <img src={cartIcon} alt="cart icon" />
+          <CartIcon color="black" />
             <span className="header-text mx-2">Cart</span>
           </div>
           <div className="header-icons marginLeft20">

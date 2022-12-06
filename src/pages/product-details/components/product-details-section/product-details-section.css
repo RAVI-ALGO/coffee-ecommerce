@@ -83,3 +83,43 @@
   line-height: 19px;
   color: #939599;
 }
+
+.other-details {
+  text-align: left;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1e2228;
+}
+
+.add-to-cart-btn {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  padding: 16px 40px;
+  text-align: center;
+  color: #ffffff;
+  background: #ff2c91;
+  border: 1px solid #ff2c91;
+  border-radius: 6px;
+}
+.add-to-cart-btn:hover {
+  color: #ffffff;
+  text-align: center;
+  background: #ff2c91;
+  border: 1px solid #ff2c91;
+  border-radius: 6px;
+}
+
+.quick-policy-title1 {
+  font-size: 16px;
+  line-height: 19px;
+  color: #1e2228;
+}
+
+.policy-value {
+  font-size: 16px;
+  line-height: 19px;
+  color: #1e2228;
+  font-weight: bold;
+  align-items: baseline;
+}

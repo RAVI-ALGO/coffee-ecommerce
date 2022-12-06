@@ -8,14 +8,34 @@
 }
 
 .color-picker-Name {
+  cursor: pointer;
   font-size: 14px;
   line-height: 16px;
   color: #1e2228;
   text-align: center;
 }
 .pink-text{
+
   font-size: 14px;
 line-height: 16px;
 
 color: #FF2C91;
+}
+.right-check
+{
+  display: none;
+  margin: 0px 30px ;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #FF2C91;
+}
+.right-check-icon
+{
+  
+  position: relative;
+  top: -5px;
+  color: white;
+  font-weight: bold;
+  font-size: large;
 }

@@ -18,13 +18,13 @@ const Product = (props) => {
         <img
           src={imageFile}
           alt="phone"
-          className="img-fluid"
+          className="img-fluid product-img my-auto"
         />
       </div>
       <div className="product-offer">{offer}</div>
       <div className="product-name">{name}</div>
       <div className="product-prices">
-        <div className="current-price">{currentPrice}</div>
+        <div className="fs-5">{currentPrice}</div>
         <div className="original-price">{originalPrice}</div>
         <div className="discount">{discount}</div>
       </div>

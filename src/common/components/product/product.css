@@ -5,10 +5,14 @@
 }
 .img-main
 {
-    width:"274"; 
-    height:"344";
+    
+    width: 109px;
+   
 }
+.product-img
+{
 
+}
 .product-offer
 {
     background-color: rgb(33, 193, 122 ,0.7);
@@ -30,7 +34,7 @@
 }
 .product-prices 
 {
-    width: 78%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     text-align: center;
