@@ -2,7 +2,7 @@
   "name": "coffeee-ecommerce",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://RAVI-ALGO.github.io",
+  "homepage": "https://github.com/RAVI-ALGO/coffeee-ecommerce.github.iogit init",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
