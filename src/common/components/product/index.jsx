@@ -16,7 +16,7 @@ const Product = (props) => {
     <div className="product" onClick={gotoProdutDetailsPage}>
       <div className="img-main">
         <img
-          src={imageFile}
+          src={imageFile[0]}
           alt="phone"
           className="img-fluid product-img my-auto"
         />

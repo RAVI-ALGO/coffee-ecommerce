@@ -9,6 +9,7 @@ import Register from './pages/register';
 import Home from './pages/home';
 import Productlist from './pages/product-list';
 import ProductDetails from './pages/product-details';
+import ShoppingCart from './pages/shopping-cart';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,8 @@ function App() {
         <Route path='/register' element={<Register/>} />
         <Route path='/products' element={<Productlist/>} />
         <Route path='/products/:productName/:productid' element={<ProductDetails />} />
+        <Route path='/cart' element={<ShoppingCart />} />
+
       </Routes>
     </div>
   );

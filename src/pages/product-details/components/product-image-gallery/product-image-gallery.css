@@ -20,16 +20,15 @@
     border: 2px solid  #FF2C91;
 }
 .custom-image-thumbnail {
-    
-  width: 45px;
-  height: 45px;
+  max-height: 100%;
+  max-width: 100%;
 }
 .product-image-section {
   margin-top: 20px;
-  height: 450px;
+  height: 350px;
   
 }
 .product-image{
-    height: 400px;
-    width: 300px;
+  max-height: 100%;
+  max-width: 100%;
 }

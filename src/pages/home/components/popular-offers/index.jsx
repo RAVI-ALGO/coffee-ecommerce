@@ -21,7 +21,7 @@ const Popularoffers = () => {
         </div>
       </div>
       <div className="tabs">
-        <Tabs defaultActiveKey="10000" id="cutomtab" className="mb-3">
+        <Tabs defaultActiveKey="10000" id="customtab" className="mb-3">
           <Tab
             eventKey="10000"
             title="'Under Rs. 10,000'"

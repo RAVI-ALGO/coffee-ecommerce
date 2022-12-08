@@ -11,6 +11,9 @@ const Header = () => {
   const goToLoginPage = () => {
     navigate("/login");
   };
+  const gotoCart = () =>{
+    navigate("/cart");
+  }
   const goToSignpPage = () =>{
     navigate("/register");
   }
@@ -32,7 +35,7 @@ const Header = () => {
           </div>
         </div>
         <div className="right-part">
-          <div className="header-icons">
+          <div className="header-icons" onClick={gotoCart}>
           <CartIcon color="black" />
             <span className="header-text mx-2">Cart</span>
           </div>

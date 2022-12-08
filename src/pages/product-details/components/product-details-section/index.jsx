@@ -9,13 +9,20 @@ import cancleIcon from "../../../../common/assets/icons/cancle.svg";
 import emiIcon from "../../../../common/assets/icons/emi-icon.svg";
 import ColorPicker from "../color-picker";
 import OffersIcon from "../../../../common/assets/icons/offers";
+import { useNavigate } from "react-router-dom";
+import Cartdata from "../../../../common/constants/cart.js";
+
 const ProductDetailsSection = (props) => {
 
+  const navigate = useNavigate();
   const {ProductDetails} = props;
-  console.log(ProductDetails);
   const { name, currentPrice, originalPrice, offer, emi, discount ,id,availableColor=[],features=[]} = ProductDetails;
-  const AvailableColors=[{colorValue:"red",colorName:"Red"},{colorValue:"black",colorName:"Black"},{colorValue:"blue",colorName:"Blue"} ,{colorValue:"gold",colorName:"Gold"}];
+  // const AvailableColors=[{colorValue:"red",colorName:"Red"},{colorValue:"black",colorName:"Black"},{colorValue:"blue",colorName:"Blue"} ,{colorValue:"gold",colorName:"Gold"}];
   const [selectedColor,setcolor] = useState(0);
+  const gotoCart = () =>{
+    Cartdata.push(ProductDetails);
+    navigate("/cart");
+  }
   
   return (
     <div className="main-details-section">
@@ -51,6 +58,7 @@ const ProductDetailsSection = (props) => {
         <Form.Select
           aria-label="Select quantity"
           className="quantity-option gap"
+          
         >
           <option value="1">1</option>
           <option value="2">2</option>
@@ -80,7 +88,7 @@ const ProductDetailsSection = (props) => {
           </span>
         </div>
       </div>
-      <div className="add-to-cart gap ">
+      <div className="add-to-cart gap " onClick={gotoCart} >
         <button className="add-to-cart-btn btn btn-lg d-flex align-items-center ">
         <CartIcon color="white" /><span className="mx-2"> Add to Cart</span>
         </button>
@@ -110,5 +118,7 @@ const ProductDetailsSection = (props) => {
       </div>
     </div>
   );
+
+  
 };
 export default ProductDetailsSection;

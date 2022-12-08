@@ -5,13 +5,14 @@
 }
 .img-main
 {
-    
-    width: 109px;
+    height: 172px;
+    width: 139px;
    
 }
 .product-img
 {
-
+    max-height: 100%;
+    max-width: 100%;
 }
 .product-offer
 {

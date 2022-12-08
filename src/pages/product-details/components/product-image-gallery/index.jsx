@@ -21,7 +21,7 @@ const ProductImageGallery = (props) => {
                 }}
               >
                 <img
-                  className="image-fluid custom-image-thumbnail"
+                  className="custom-image-thumbnail"
                   src={phoneimg}
                   alt="Product image"
                 />
@@ -31,7 +31,7 @@ const ProductImageGallery = (props) => {
         </div>
         <div className="col-md-10  product-image-section">
           <img
-            className="image-fluid product-image mt-2"
+            className="image-fluid product-image"
             src={images[selectedthumbnail]}
             alt="Product image"
           />
