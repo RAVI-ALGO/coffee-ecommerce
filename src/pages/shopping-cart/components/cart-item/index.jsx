@@ -50,8 +50,8 @@ const CartItem = (props) => {
           })}
         </Form.Select>
       </div>
-      <div>
-        <button className="btn remove-button pink-text">Remove</button>
+      <div className="remove-button-main">
+        <button className="btn remove-button pink-text ">Remove</button>
       </div>
     </div>
   );

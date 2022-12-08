@@ -14,13 +14,29 @@
   padding: 10px;
 }
 
-.coupon-field {
-
+.coupon-field-main {
+  display: flex;
+  align-items: center;
   background: #ffffff;
   border: 1px solid #d8d8d8;
   border-radius: 8px;
 }
+.coupon-field
+{
+  border: none;
+}
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .offer
 {
-    padding: 5px 10px 0px 0px;
+   margin-right: 10px;
+}
+::placeholder
+{
+  font-size: 13px;
+line-height: 16px;
+color: #7F8386;
 }
