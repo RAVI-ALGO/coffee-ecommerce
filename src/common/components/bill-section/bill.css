@@ -1,0 +1,55 @@
+
+.cart-body-right-bottom {
+  margin-top: 20px;
+  height: 256px;
+  width: 280px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.bill-heading {
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #231f20;
+  text-align: left;
+  font-weight: bold;
+}
+
+.item-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 120%;
+  color: #231f20;
+}
+
+.total {
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #231f20;
+  display: flex;
+  justify-content: space-between;
+}
+.select-address-btn {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  width: 244px;
+  height: 56px;
+  background: #ff2c91;
+  border: 1px solid #ff2c91;
+  border-radius: 6px;
+}
+.select-address-btn:hover {
+  color: #ffffff;
+  background: #ff2c91;
+  border: 1px solid #ff2c91;
+  border-radius: 6px;
+}

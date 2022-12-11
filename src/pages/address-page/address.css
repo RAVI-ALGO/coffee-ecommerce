@@ -1,0 +1,113 @@
+.address-page-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f4f4;
+}
+.address-body {
+  width: 960px;
+  height: 780px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.address-body-left-part {
+  height: 386px;
+  width: 280px;
+}
+
+.blur-color {
+  color: #939599;
+}
+.process-bar {
+  margin: 30px;
+  display: flex;
+  align-items: left;
+}
+.process-bar-title {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: bold;
+}
+.select-address-heading {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #1e2228;
+}
+.add-address-link {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.saved-address .active {
+  width: 440px;
+  height: 130px;
+  background: #ffffff;
+  border: 1px solid #ff2c91;
+  border-radius: 6px;
+}
+.saved-address {
+  padding: 20px 0px 20px 30px;
+  width: 440px;
+  height: 130px;
+  background: #ffffff;
+  border: 1px solid #c8c9ca;
+  border-radius: 6px;
+}
+.address-name {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #1e2228;
+  text-align: left;
+}
+.address {
+  font-size: 14px;
+  line-height: 22px;
+  color: #1e2228;
+  text-align: left;
+  font-weight: 500;
+}
+.form-check-input {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  left: 10px;
+  top: -5px;
+}
+.form-check-input:checked {
+  background-color: #ff2c91;
+}
+.form-check-input:focus {
+  box-shadow: none;
+  border: none;
+}
+.form-check-label {
+  height: 400 px;
+}
+.address-form {
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1e2228;
+}
+.form-control
+{
+font-weight: 500;
+color: #1E2228;
+}
+.form-label {
+  
+  font-size: 14px;
+  line-height: 16px;
+  color: #939599;
+}
+.savebtn {
+  display: flex;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #ff2c91;
+}

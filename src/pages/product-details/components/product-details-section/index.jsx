@@ -10,8 +10,6 @@ import emiIcon from "../../../../common/assets/icons/emi-icon.svg";
 import ColorPicker from "../color-picker";
 import OffersIcon from "../../../../common/assets/icons/offers";
 import { useNavigate } from "react-router-dom";
-import Cartdata from "../../../../common/constants/cart.js";
-
 const ProductDetailsSection = (props) => {
 
   const navigate = useNavigate();
@@ -20,7 +18,7 @@ const ProductDetailsSection = (props) => {
   // const AvailableColors=[{colorValue:"red",colorName:"Red"},{colorValue:"black",colorName:"Black"},{colorValue:"blue",colorName:"Blue"} ,{colorValue:"gold",colorName:"Gold"}];
   const [selectedColor,setcolor] = useState(0);
   const gotoCart = () =>{
-    Cartdata.push(ProductDetails);
+    localStorage.setItem('cartdata',JSON.stringify(ProductDetails));
     navigate("/cart");
   }
   

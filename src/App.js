@@ -10,6 +10,9 @@ import Home from './pages/home';
 import Productlist from './pages/product-list';
 import ProductDetails from './pages/product-details';
 import ShoppingCart from './pages/shopping-cart';
+import AddressPage from './pages/address-page';
+import Payment from './pages/payment';
+import OrederPlace from './pages/home/order-placed';
 function App() {
   return (
     <div className="App">
@@ -20,7 +23,9 @@ function App() {
         <Route path='/products' element={<Productlist/>} />
         <Route path='/products/:productName/:productid' element={<ProductDetails />} />
         <Route path='/cart' element={<ShoppingCart />} />
-
+        <Route path='/cart/select-address/' element={<AddressPage />} />
+        <Route path='/cart/select-address/payment/' element={<Payment />} />
+        <Route path='/cart/select-address/payment/order-placed/' element={<OrederPlace />} />
       </Routes>
     </div>
   );

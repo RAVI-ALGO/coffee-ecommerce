@@ -1,0 +1,89 @@
+.order-placed-main {
+  background-color: #f5f0f0bf;
+}
+.order-place-left {
+  background-color: #ffff;
+  width: 950px;
+  height: 525px;
+  margin: 24px 0 24px 0;
+}
+
+.delivery-address {
+  margin-top: 9%;
+  margin-bottom: 10px;
+  height: 130px;
+  width: 280px;
+  border-radius: 8px;
+  background-color: #ffff;
+}
+.delivery-address-heading {
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+
+  color: #231f20;
+}
+.checkimg {
+  height: 50px;
+  width: 50px;
+}
+.greeting {
+  font-family: "Gilroy-Bold";
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #21c17a;
+}
+.dot {
+  height: 4px;
+  width: 4px;
+  background: #939599;
+}
+.ordered-item-thumnail {
+  width: 120px;
+  height: 90px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-radius: 16px;
+}
+
+.ordered-item-thumnail-image {
+  max-height: 100%;
+  max-width: 100%;
+}
+.ordered-item-name {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #1e2228;
+  text-align: left;
+}
+
+.ordered-item-price {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+  color: #1e2228;
+}
+.continue-shopping-btn {
+  background: #ff2c91;
+  border: 1px solid #ff2c91;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+.continue-shopping-btn:hover {
+  background: #ff2c91;
+  border: 1px solid #ff2c91;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+

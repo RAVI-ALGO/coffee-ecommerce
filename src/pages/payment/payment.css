@@ -1,0 +1,54 @@
+.payment-body-main {
+  background-color: #f5f0f0bf;
+}
+.payment-left {
+  background-color: #ffff;
+  width: 950px;
+  height: 525px;
+  margin: 24px 0 24px 0;
+}
+.blur-color {
+  color: #939599;
+}
+.process-bar {
+  margin: 30px;
+  display: flex;
+  align-items: left;
+}
+.process-bar-title {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.form-check-label {
+  margin-left: 30px;
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  color: black;
+}
+.payment-heading {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #1e2228;
+}
+.address-bar {
+  margin-top: 9%;
+  margin-bottom: 10px;
+  height: 130px;
+  width: 280px;
+  border-radius: 8px;
+  background-color: #ffff;
+}
+
+.delivery-address-heading {
+  font-size: 18px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+
+  color: #231f20;
+}
