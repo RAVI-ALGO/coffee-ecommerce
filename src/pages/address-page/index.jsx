@@ -1,7 +1,7 @@
 import React from "react";
 import Bullet1 from "../../common/assets/icons/bullet1";
 import ApplyCoupon from "../../common/components/apply-coupon";
-import BillSection from "../../common/components/bill-section";
+// import BillSection from "../../common/components/bill-section";
 import FooterBottom2 from "../../common/components/footer-bottom-2";
 import Header2 from "../../common/components/header2";
 import checkIcon from "../../common/assets/icons/check.svg";
@@ -202,7 +202,7 @@ const AddressPage = () => {
           </div>
           <div className="address-body-left-part mx-3 my-3">
             <ApplyCoupon />
-            <BillSection price={MycartItem.currentPrice}   btnname ="Proceed to Payment" onclickfn={gotoPayment} />
+            {/* <BillSection price={MycartItem.currentPrice}   btnname ="Proceed to Payment" onclickfn={gotoPayment} /> */}
           </div>
         </div>
       </div>

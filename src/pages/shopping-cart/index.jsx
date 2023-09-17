@@ -7,16 +7,21 @@ import Bullet2 from "../../common/assets/icons/bullet2";
 import Bullet3 from "../../common/assets/icons/bullet3";
 import CartItem from "./components/cart-item";
 import ApplyCoupon from "../../common/components/apply-coupon";
-import BillSection from "../../common/components/bill-section";
 import { useNavigate } from "react-router-dom";
+import BillSection from "../../common/components/bill-section";
 
 const ShoppingCart = () => {
-  const cartdata = localStorage.getItem("cartdata");
-  const MycartItem = JSON.parse(cartdata);
+  let cart = JSON.parse(localStorage.getItem("cartdata")) || [];
+  const totalPrice = cart.map((item)=>{return item.currentPrice.slice(1)})
   const navigate = useNavigate();
   const gotoAddress = () => {
     navigate("/cart/select-address");
   };
+
+   function handleClick()
+   {
+    navigate('/cart/select-address/');
+   }
   return (
     <div className="main-cart ">
       <Header2 />
@@ -49,19 +54,16 @@ const ShoppingCart = () => {
             </div>
 
             <div className="cart-item mx-4 mt-5 ">
-              {[MycartItem].map((cartitem, index) => {
+            {(cart.length >0)? cart.map((cartitem, index) => {
                 return <CartItem details={cartitem} key={index} />;
-              })}
+              }): <p>Your Cart is empty!</p>}
+            
             </div>
           </div>
           <div className="cart-body-right-part mx-2">
             <ApplyCoupon />
 
-            <BillSection
-              price={MycartItem.currentPrice}
-              btnname="Selcet Address"
-              onclickfn={gotoAddress}
-            />
+           {(cart.length >0)? <BillSection price={totalPrice} others={{btnName:"Buy Now",onclickfn:handleClick}} />:''}
           </div>
         </div>
       </div>

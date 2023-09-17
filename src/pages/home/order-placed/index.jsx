@@ -1,15 +1,14 @@
 import React from "react";
 import ApplyCoupon from "../../../common/components/apply-coupon";
-import BillSection from "../../../common/components/bill-section";
+// import BillSection from "../../../common/components/bill-section";
 import FooterBottom2 from "../../../common/components/footer-bottom-2";
 import Header2 from "../../../common/components/header2";
-import checkIcon from "../../../common/assets/icons/check.svg";
+//import checkIcon from "../../../common/assets/icons/check.svg";
 import "./order-placed.css";
 import { useNavigate } from "react-router-dom";
 
 const OrederPlace = () => {
-  const cartdata = localStorage.getItem("cartdata");
-  const MycartItem = JSON.parse(cartdata);
+  let cart = JSON.parse(localStorage.getItem("cartdata"));
   const address = localStorage.getItem("address");
   const DeliveryAdd = JSON.parse(address);
   const d = new Date();
@@ -25,7 +24,7 @@ const OrederPlace = () => {
         <div className="container d-flex justify-content-between">
           <div className="order-place-left">
             <div className="d-flex mx-5 mt-5">
-              <img src={checkIcon} alt="check-icon" className="checkimg" />
+              {/* <img src={checkIcon} alt="check-icon" className="checkimg" /> */}
             </div>
             <div className="mx-5">
               <span className=" mt-2 d-flex greeting">Congratulation!!!</span>
@@ -45,7 +44,7 @@ const OrederPlace = () => {
                 <span>1 item</span>
               </div>
               <div>
-                {[MycartItem].map((item, index) => {
+                {[cart].map((item, index) => {
                   return (
                     <div key={index} className="mt-3 d-flex w-50">
                       <div className="ordered-item-thumnail">
@@ -78,7 +77,7 @@ const OrederPlace = () => {
               </div>
             </div>
 
-            <BillSection price={MycartItem.currentPrice} visiblity="none" />
+            {/* <BillSection price={MycartItem.currentPrice} visiblity="none" /> */}
           </div>
         </div>
       </div>

@@ -10,6 +10,10 @@
   border: 1px solid #d8d8d8;
   border-radius: 16px;
 }
+.item-quty
+{
+  width: 90px;
+}
 
 .cart-item-thumnail-image {
   max-height: 100%;

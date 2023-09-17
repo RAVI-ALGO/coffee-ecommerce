@@ -4,9 +4,12 @@ import "./bill.css";
 
 const BillSection = (props) => {
   const tex = "250";
-  const price = props.price.slice(1);
-  const total = parseInt(tex, 10) + parseInt(price);
-  
+  const price = props.price;
+ 
+  const CartValue = price.reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0);
+
+  const total = parseInt(tex, 10) + parseInt(CartValue);
+  console.log('total',total);
 
   
   const navigate = useNavigate();
@@ -19,7 +22,7 @@ const BillSection = (props) => {
       <div className="invoice mx-4">
         <div className="item-list my-2">
           <span>Item Total</span>
-          <span>₹ {price}</span>
+          <span>₹ {CartValue}</span>
         </div>
         <div className="item-list">
           <span>
@@ -34,9 +37,9 @@ const BillSection = (props) => {
           <div>Total Amount</div>
           <div>₹ {total}</div>
         </div>
-        <div className="my-2"  onClick={props.onclickfn}>
-          <button style={{display:props.visiblity}} className="select-address-btn btn btn-lg">
-            <span className="mx-2">{props.btnname}</span>
+        <div className="my-2"  onClick={props.others.onclickfn}>
+          <button  className="select-address-btn btn btn-lg">
+            <span className="mx-2">{props.others.btnName}</span>
           </button>
         </div>
       </div>

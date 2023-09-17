@@ -5,7 +5,7 @@ import FooterBottom2 from "../../common/components/footer-bottom-2";
 import checkIcon from "../../common/assets/icons/check.svg";
 import Bullet3 from "../../common/assets/icons/bullet3";
 import ApplyCoupon from "../../common/components/apply-coupon";
-import BillSection from "../../common/components/bill-section";
+// import BillSection from "../../common/components/bill-section";
 import { useNavigate } from "react-router-dom";
 const Payment = () => {
   const cartdata = localStorage.getItem("cartdata");
@@ -81,11 +81,11 @@ const Payment = () => {
               </div>
             </div>
             <ApplyCoupon />
-            <BillSection
+            {/* <BillSection
               price={MycartItem.currentPrice}
               btnname="Place order"
               onclickfn={gotoPlaceOrder}
-            />
+            /> */}
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useState } from "react";
 import "./product-details-section.css";
 import Form from "react-bootstrap/Form";
 import CartIcon from "../../../../common/assets/icons/cart.jsx";
@@ -9,46 +9,86 @@ import cancleIcon from "../../../../common/assets/icons/cancle.svg";
 import emiIcon from "../../../../common/assets/icons/emi-icon.svg";
 import ColorPicker from "../color-picker";
 import OffersIcon from "../../../../common/assets/icons/offers";
-import { useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 const ProductDetailsSection = (props) => {
-
   const navigate = useNavigate();
-  const {ProductDetails} = props;
-  const { name, currentPrice, originalPrice, offer, emi, discount ,id,availableColor=[],features=[]} = ProductDetails;
+  const { ProductDetails } = props;
+  const {
+    name,
+    currentPrice,
+    originalPrice,
+    offer,
+    emi,
+    discount,
+    id,
+    availableColor = [],
+    features = [],
+  } = ProductDetails;
   // const AvailableColors=[{colorValue:"red",colorName:"Red"},{colorValue:"black",colorName:"Black"},{colorValue:"blue",colorName:"Blue"} ,{colorValue:"gold",colorName:"Gold"}];
-  const [selectedColor,setcolor] = useState(0);
-  const gotoCart = () =>{
-    localStorage.setItem('cartdata',JSON.stringify(ProductDetails));
-    navigate("/cart");
-  }
-  
+  const [selectedColor, setcolor] = useState(0);
+  const [cartdata, setcartdata] = useState({});
+  const addToCart = (Product) => {
+    let cart = JSON.parse(localStorage.getItem("cartdata")) || [];
+     if(cart.length ===0)
+      {
+       
+        let Allcartdata = [...cart,Product];
+        setcartdata(Allcartdata);
+        localStorage.setItem("cartdata", JSON.stringify(Allcartdata));
+        navigate("/cart");
+      }
+    
+    cart.filter((item) =>{
+      if(item.id === Product.id)
+      {
+        alert("Product already added to your cart");
+        navigate("/cart");
+      }
+      else{
+        let Allcartdata = [...cart,Product];
+        setcartdata(Allcartdata);
+        localStorage.setItem("cartdata", JSON.stringify(Allcartdata));
+        navigate("/cart");
+
+      }
+      
+    });
+  };
+
   return (
     <div className="main-details-section">
-      <h1 className="product-title gap">
-        {name}
-      </h1>
+      <h1 className="product-title gap">{name}</h1>
       <div className="specifications gap">
         <p className="features-title">key Features</p>
         <ul>
-        {features.map((allfeatures,index) =>{
-              return(<li key={index}>
-            <img src={checkIcon} alt="check icon" />
-            <span className="mx-2">
-              {allfeatures}
-            </span>
-          </li>);
-        })}
+          {features.map((allfeatures, index) => {
+            return (
+              <li key={index}>
+                <img src={checkIcon} alt="check icon" />
+                <span className="mx-2">{allfeatures}</span>
+              </li>
+            );
+          })}
         </ul>
       </div>
-      
+
       <div className="color-picker-main gap">
         <p className="color-picker-title">Chose Color</p>
         <div className="d-flex align-items-center justify-space-between">
-        {availableColor.map((color,index) => {
-          const {colorValue,colorName} =color;
-          return(<ColorPicker key={index} color={colorValue} name={colorName} active ={selectedColor === index ? "true" : ""}  clickfun={() => {setcolor(index)}} 
-           />);
-        })}
+          {availableColor.map((color, index) => {
+            const { colorValue, colorName } = color;
+            return (
+              <ColorPicker
+                key={index}
+                color={colorValue}
+                name={colorName}
+                active={selectedColor === index ? "true" : ""}
+                clickfun={() => {
+                  setcolor(index);
+                }}
+              />
+            );
+          })}
         </div>
       </div>
       <div className="gap d-flex">
@@ -56,7 +96,6 @@ const ProductDetailsSection = (props) => {
         <Form.Select
           aria-label="Select quantity"
           className="quantity-option gap"
-          
         >
           <option value="1">1</option>
           <option value="2">2</option>
@@ -73,22 +112,22 @@ const ProductDetailsSection = (props) => {
       <div className="bottom-part my-1">Inclusive of all taxes</div>
       <div className="other-details gap">
         <div className="my-2">
-        <img src={emiIcon} alt="emi icon" />
+          <img src={emiIcon} alt="emi icon" />
           <span className="mx-2">
-          No cost {emi}/month. Standard EMI also available. T&C
+            No cost {emi}/month. Standard EMI also available. T&C
           </span>
         </div>
         <div className="my-2">
-        <OffersIcon color="black" height="16" width="16" />
+          <OffersIcon color="black" height="16" width="16" />
           <span className="mx-2">
-          Bank Offer {offer} on Flipkart Axs Bank Credit Card.
-            T&C
+            Bank Offer {offer} on Flipkart Axs Bank Credit Card. T&C
           </span>
         </div>
       </div>
-      <div className="add-to-cart gap " onClick={gotoCart} >
+      <div className="add-to-cart gap " onClick={() => addToCart(ProductDetails)}>
         <button className="add-to-cart-btn btn btn-lg d-flex align-items-center ">
-        <CartIcon color="white" /><span className="mx-2"> Add to Cart</span>
+          <CartIcon color="white" />
+          <span className="mx-2"> Add to Cart</span>
         </button>
       </div>
       <div className="quick-policies d-flex justify-space-between align-items-center mt-4">
@@ -116,7 +155,5 @@ const ProductDetailsSection = (props) => {
       </div>
     </div>
   );
-
-  
 };
 export default ProductDetailsSection;
