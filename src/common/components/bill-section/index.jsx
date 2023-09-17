@@ -9,7 +9,7 @@ const BillSection = (props) => {
   const CartValue = price.reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0);
 
   const total = parseInt(tex, 10) + parseInt(CartValue);
-  console.log('total',total);
+ 
 
   
   const navigate = useNavigate();

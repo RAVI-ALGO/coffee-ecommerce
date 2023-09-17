@@ -15,6 +15,7 @@ const OrederPlace = () => {
   const date =d.toLocaleDateString();
   const navigate =useNavigate();
   const gotoproduct = () =>{
+    localStorage.clear()
       navigate("/products");
   }
   return (
@@ -44,7 +45,7 @@ const OrederPlace = () => {
                 <span>1 item</span>
               </div>
               <div>
-                {[cart].map((item, index) => {
+                {cart.map((item, index) => {
                   return (
                     <div key={index} className="mt-3 d-flex w-50">
                       <div className="ordered-item-thumnail">

@@ -7,14 +7,17 @@ import Bullet3 from "../../common/assets/icons/bullet3";
 import ApplyCoupon from "../../common/components/apply-coupon";
 // import BillSection from "../../common/components/bill-section";
 import { useNavigate } from "react-router-dom";
+import BillSection from "../../common/components/bill-section";
 const Payment = () => {
   const cartdata = localStorage.getItem("cartdata");
   const MycartItem = JSON.parse(cartdata);
+  const totalPrice = MycartItem.map((item)=>{return item.currentPrice.slice(1)})
   const address = localStorage.getItem("address");
   const DeliveryAdd = JSON.parse(address);
 
   const navigate = useNavigate();
-  const gotoPlaceOrder = () => {
+  const handleClick = () => {
+  
     navigate("/cart/select-address/payment/order-placed/");
   };
 
@@ -81,6 +84,7 @@ const Payment = () => {
               </div>
             </div>
             <ApplyCoupon />
+            {(MycartItem.length >0)? <BillSection price={totalPrice} others={{btnName:"Place order",onclickfn:handleClick}} />:''}
             {/* <BillSection
               price={MycartItem.currentPrice}
               btnname="Place order"

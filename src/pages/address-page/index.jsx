@@ -9,13 +9,15 @@ import "./address.css";
 import Bullet2 from "../../common/assets/icons/bullet2";
 import Bullet3 from "../../common/assets/icons/bullet3";
 import { useNavigate } from "react-router-dom";
+import BillSection from "../../common/components/bill-section";
 
 const AddressPage = () => {
   const cartdata = localStorage.getItem("cartdata");
   const MycartItem = JSON.parse(cartdata);
-
+  const totalPrice = MycartItem.map((item)=>{return item.currentPrice.slice(1)})
   const navigate = useNavigate();
-  const gotoPayment = () => {
+
+  const handleClick = () => {
 
     if(document.getElementById('flexRadioDefault1').checked) {
       const Name = document.getElementById('flexRadioDefault1').nextSibling.firstChild.innerHTML;
@@ -202,6 +204,7 @@ const AddressPage = () => {
           </div>
           <div className="address-body-left-part mx-3 my-3">
             <ApplyCoupon />
+            {(MycartItem.length >0)? <BillSection price={totalPrice} others={{btnName:"Proceed to Payment",onclickfn:handleClick}} />:''}
             {/* <BillSection price={MycartItem.currentPrice}   btnname ="Proceed to Payment" onclickfn={gotoPayment} /> */}
           </div>
         </div>
